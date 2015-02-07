@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".ScripRef"
+    android:id="@+id/ScripRef">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/instructText"
+        android:text="Enter Your Favorite Scripture!"
+        android:textSize="25dp"
+        android:layout_above="@+id/editBook"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="45dp" />
+
+
+    <TextView
+        android:text="@string/book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtBook"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/txtVerse"
+        android:layout_alignStart="@+id/txtVerse"
+        android:textSize="15dp" />
+
+    <TextView
+        android:text="@string/chapter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtBook"
+        android:id="@+id/txtChapter"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="20dp"
+        android:textSize="15dp" />
+
+    <TextView
+        android:text="@string/verse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtChapter"
+        android:id="@+id/txtVerse"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="20dp"
+        android:textSize="15dp"
+        android:onClick="nextPage"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editBook"
+        android:layout_above="@+id/txtChapter"
+        android:layout_toRightOf="@+id/txtChapter"
+        android:layout_toEndOf="@+id/txtChapter" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editChapter"
+        android:layout_alignBottom="@+id/txtChapter"
+        android:layout_alignLeft="@+id/editBook"
+        android:layout_alignStart="@+id/editBook" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editVerse"
+        android:layout_alignBottom="@+id/txtVerse"
+        android:layout_alignLeft="@+id/editBook"
+        android:layout_alignStart="@+id/editBook" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shareTxt"
+        android:text="@string/shareTxt"
+        android:layout_below="@+id/txtVerse"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:onClick="shareRef"/>
+
+</RelativeLayout>
